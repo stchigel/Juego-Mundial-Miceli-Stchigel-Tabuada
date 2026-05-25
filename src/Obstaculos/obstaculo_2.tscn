@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ts66bmchdr11"]
+
+[ext_resource type="Script" uid="uid://b716c10fk37yl" path="res://src/Obstaculos/obstaculo_2.gd" id="1_whcj1"]
+[ext_resource type="Texture2D" uid="uid://ddhte46iie05o" path="res://assets/red-elastic-trampoline-for-jumping-business-and-funny-concept-3d-rendering-png.webp" id="2_whcj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bob6j"]
+size = Vector2(222, 73)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3f0y"]
+size = Vector2(149.75, 16.75)
+
+[node name="Trampolin" type="StaticBody2D" unique_id=552654706 groups=["obstaculo"]]
+script = ExtResource("1_whcj1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1939911447]
+position = Vector2(118, 66.5)
+shape = SubResource("RectangleShape2D_bob6j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1980705838]
+position = Vector2(119.999985, 33)
+scale = Vector2(0.18770483, 0.15204084)
+texture = ExtResource("2_whcj1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=105039588]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1872083932]
+position = Vector2(118, 26)
+shape = SubResource("RectangleShape2D_x3f0y")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
