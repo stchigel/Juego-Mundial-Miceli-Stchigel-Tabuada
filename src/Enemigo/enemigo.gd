@@ -3,7 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-const VERTICAL_SPEED = 1.0
+const VERTICAL_SPEED = 80.0
+const TRACKING_DEADZONE = 10.0
 
 var _player: Node2D
 
@@ -22,7 +23,10 @@ func _physics_process(delta: float) -> void:
 		_actualizar_player()
 
 	if is_instance_valid(_player):
-		if _player.position.y < position.y:
+		var delta_y = _player.position.y - position.y
+		if absf(delta_y) < TRACKING_DEADZONE:
+			velocity.y = 0
+		elif delta_y < 0:
 			velocity.y = -VERTICAL_SPEED
 		else:
 			velocity.y = VERTICAL_SPEED
