@@ -9,7 +9,7 @@ size = Vector2(222, 73)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3f0y"]
 size = Vector2(149.75, 16.75)
 
-[node name="Trampolin" type="StaticBody2D" unique_id=552654706 groups=["obstaculo"]]
+[node name="Trampolin" type="StaticBody2D" unique_id=1700234561 groups=["obstaculo"]]
 script = ExtResource("1_whcj1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1939911447]
