@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_instance_valid(_player):
 		var delta_y = _player.position.y - position.y
-		if absf(delta_y) < TRACKING_DEADZONE:
+		if abs(delta_y) < TRACKING_DEADZONE:
 			velocity.y = 0
 		elif delta_y < 0:
 			velocity.y = -VERTICAL_SPEED
