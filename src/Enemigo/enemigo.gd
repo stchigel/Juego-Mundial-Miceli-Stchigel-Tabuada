@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 
 	if not is_instance_valid(_player):
 		velocity.y = 0
-	elif _player.position.x < position.x:
+	elif _player.position.y < position.y:
 		velocity.y = -SPEED
 	else:
 		velocity.y = SPEED
