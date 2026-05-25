@@ -1,6 +1,6 @@
 extends Camera2D
 @export var player: Node2D
-var offset_x: float = 200
+var offset_x: float = 100
 var smooth_speed: float = 5.0
 
 # Called when the node enters the scene tree for the first time.
