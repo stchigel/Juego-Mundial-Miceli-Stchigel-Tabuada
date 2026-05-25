@@ -4,14 +4,28 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+var _player: Node2D
+
+func _ready() -> void:
+	_actualizar_player()
+
+func _actualizar_player() -> void:
+	var jugadores = get_tree().get_nodes_in_group("player")
+	_player = jugadores[0] if not jugadores.is_empty() else null
+
 
 func _physics_process(delta: float) -> void:
 	velocity.x = SPEED
 
-	if get_tree().get_nodes_in_group("player")[0].position.x < position.x:
-		velocity.y = -1
+	if not is_instance_valid(_player):
+		_actualizar_player()
+
+	if not is_instance_valid(_player):
+		velocity.y = 0
+	elif _player.position.x < position.x:
+		velocity.y = -SPEED
 	else:
-		velocity.y = 1
+		velocity.y = SPEED
 
 	move_and_slide()
 
