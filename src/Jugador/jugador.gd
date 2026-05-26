@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 		velocity.y = _velocidad_salto
+		$AnimatedSprite2D.play("Saltar")
 
 	if Input.is_action_pressed("derecha"):
 		animacion.flip_h=false
