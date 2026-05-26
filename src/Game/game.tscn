@@ -5,14 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://cleow4sev1af3" path="res://src/Jugador/jugador.tscn" id="2_k6qo2"]
 [ext_resource type="Script" uid="uid://dys532bcf8ip1" path="res://src/Game/camera_2d.gd" id="4_7m6cs"]
 [ext_resource type="PackedScene" uid="uid://cl7y0xndtta35" path="res://src/Enemigo/enemigo.tscn" id="4_bob6j"]
-[ext_resource type="PackedScene" uid="uid://rrbv0qb2lurm" path="res://src/Obstaculos/obstaculo_1.tscn" id="5_3s8ir"]
 [ext_resource type="PackedScene" uid="uid://ts66bmchdr11" path="res://src/Obstaculos/obstaculo_2.tscn" id="7_le6wr"]
 
 [node name="Game" type="Node2D" unique_id=1937971750]
 script = ExtResource("1_60cvd")
 
 [node name="nivel" type="TileMapLayer" parent="." unique_id=512492040]
-tile_map_data = PackedByteArray("AAD//wgAAAAAAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAAAAAADAAgAAAABAAAAAAAEAAgAAAABAAAAAAAFAAgAAAABAAAAAAAGAAgAAAABAAAAAAAHAAgAAAABAAAAAAAIAAgAAAABAAAAAAAJAAgAAAABAAAAAAAKAAgAAAABAAAAAAALAAgAAAABAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAOAAgAAAABAAAAAAAPAAgAAAABAAAAAAAQAAgAAAABAAAAAAARAAgAAAABAAAAAAASAAgAAAABAAAAAAATAAgAAAABAAAAAAAUAAgAAAABAAAAAAAVAAgAAAABAAAAAAAWAAgAAAABAAAAAAAXAAgAAAABAAAAAAAYAAgAAAABAAAAAAAZAAgAAAABAAAAAAAaAAgAAAABAAAAAAAbAAgAAAABAAAAAAAcAAgAAAABAAAAAAAdAAgAAAABAAAAAAAeAAgAAAABAAAAAAAfAAgAAAABAAAAAAAgAAgAAAABAAAAAAAhAAgAAAABAAAAAAAiAAgAAAABAAAAAAAjAAgAAAABAAAAAAAkAAgAAAABAAAAAAAlAAgAAAABAAAAAAAmAAgAAAABAAAAAAAnAAgAAAABAAAAAAAoAAgAAAABAAAAAAApAAgAAAABAAAAAAAqAAgAAAABAAAAAAArAAgAAAABAAAAAAAsAAgAAAACAAAAAAAQAAQAAAABAAMAAAARAAQAAAABAAMAAAASAAQAAAACAAMAAAAPAAQAAAAAAAMAAAAVAAQAAAADAAAAAAAVAAUAAAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAD//wgAAAAAAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAAAAAADAAgAAAABAAAAAAAEAAgAAAABAAAAAAAFAAgAAAABAAAAAAAGAAgAAAABAAAAAAAHAAgAAAABAAAAAAAIAAgAAAABAAAAAAAJAAgAAAABAAAAAAAKAAgAAAABAAAAAAALAAgAAAABAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAOAAgAAAABAAAAAAAPAAgAAAABAAAAAAAQAAgAAAABAAAAAAARAAgAAAABAAAAAAASAAgAAAABAAAAAAATAAgAAAABAAAAAAAUAAgAAAABAAAAAAAVAAgAAAABAAAAAAAWAAgAAAABAAAAAAAXAAgAAAABAAAAAAAYAAgAAAABAAAAAAAZAAgAAAABAAAAAAAaAAgAAAABAAAAAAAbAAgAAAABAAAAAAAcAAgAAAABAAAAAAAdAAgAAAABAAAAAAAeAAgAAAABAAAAAAAfAAgAAAABAAAAAAAgAAgAAAABAAAAAAAhAAgAAAABAAAAAAAiAAgAAAABAAAAAAAjAAgAAAABAAAAAAAkAAgAAAABAAAAAAAlAAgAAAABAAAAAAAmAAgAAAABAAAAAAAnAAgAAAABAAAAAAAoAAgAAAABAAAAAAApAAgAAAABAAAAAAAqAAgAAAABAAAAAAArAAgAAAABAAAAAAAsAAgAAAACAAAAAAAQAAQAAAABAAMAAAARAAQAAAABAAMAAAASAAQAAAACAAMAAAAPAAQAAAAAAAMAAAAVAAQAAAADAAAAAAAVAAUAAAADAAIAAAAOAAUAAAADAAMAAAA=")
 tile_set = ExtResource("2_7m6cs")
 
 [node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_k6qo2")]
@@ -26,50 +25,5 @@ player = NodePath("../Jugador")
 [node name="Enemigo" parent="." unique_id=779072344 instance=ExtResource("4_bob6j")]
 position = Vector2(-41, 188)
 
-[node name="Obstaculo1" parent="." unique_id=552654706 instance=ExtResource("5_3s8ir")]
-position = Vector2(423, 548)
-
-[node name="Obstaculo2" parent="." unique_id=495873675 instance=ExtResource("5_3s8ir")]
-position = Vector2(700, 519)
-
-[node name="Obstaculo3" parent="." unique_id=1884547460 instance=ExtResource("5_3s8ir")]
-position = Vector2(1179, 533)
-
-[node name="Obstaculo4" parent="." unique_id=1938926299 instance=ExtResource("5_3s8ir")]
-position = Vector2(4338, 511)
-
-[node name="Obstaculo5" parent="." unique_id=174744450 instance=ExtResource("5_3s8ir")]
-position = Vector2(4615, 482)
-
-[node name="Obstaculo6" parent="." unique_id=981332886 instance=ExtResource("5_3s8ir")]
-position = Vector2(5094, 496)
-
-[node name="Obstaculo7" parent="." unique_id=1236442600 instance=ExtResource("5_3s8ir")]
-position = Vector2(1397, 500)
-
-[node name="Obstaculo8" parent="." unique_id=167301766 instance=ExtResource("5_3s8ir")]
-position = Vector2(1674, 471)
-
-[node name="Obstaculo9" parent="." unique_id=1060355486 instance=ExtResource("5_3s8ir")]
-position = Vector2(2153, 485)
-
-[node name="Obstaculo10" parent="." unique_id=962489847 instance=ExtResource("5_3s8ir")]
-position = Vector2(2481, 497)
-
-[node name="Obstaculo11" parent="." unique_id=510674757 instance=ExtResource("5_3s8ir")]
-position = Vector2(2758, 468)
-
-[node name="Obstaculo12" parent="." unique_id=1592342229 instance=ExtResource("5_3s8ir")]
-position = Vector2(3237, 482)
-
-[node name="Obstaculo13" parent="." unique_id=1367401184 instance=ExtResource("5_3s8ir")]
-position = Vector2(3436, 563)
-
-[node name="Obstaculo14" parent="." unique_id=2037537856 instance=ExtResource("5_3s8ir")]
-position = Vector2(3713, 534)
-
-[node name="Obstaculo15" parent="." unique_id=1082875809 instance=ExtResource("5_3s8ir")]
-position = Vector2(4192, 548)
-
 [node name="Trampolin" parent="." unique_id=1417891563 instance=ExtResource("7_le6wr")]
-position = Vector2(854, 519)
+position = Vector2(774, 147)
