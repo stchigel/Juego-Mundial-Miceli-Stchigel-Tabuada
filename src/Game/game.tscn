@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://vxgkhkh5drbt" path="res://src/Game/game.gd" id="1_60cvd"]
 [ext_resource type="TileSet" uid="uid://h8w45y7y0nlx" path="res://assets/terreno.tres" id="2_7m6cs"]
 [ext_resource type="PackedScene" uid="uid://cleow4sev1af3" path="res://src/Jugador/jugador.tscn" id="2_k6qo2"]
-[ext_resource type="Script" uid="uid://dys532bcf8ip1" path="res://src/Game/camera_2d.gd" id="4_7m6cs"]
 [ext_resource type="PackedScene" uid="uid://cl7y0xndtta35" path="res://src/Enemigo/enemigo.tscn" id="4_bob6j"]
 [ext_resource type="PackedScene" uid="uid://ts66bmchdr11" path="res://src/Obstaculos/obstaculo_2.tscn" id="7_le6wr"]
 
@@ -16,11 +15,6 @@ tile_set = ExtResource("2_7m6cs")
 
 [node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_k6qo2")]
 position = Vector2(219, 130)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1738234946 node_paths=PackedStringArray("player")]
-position = Vector2(238, 187)
-script = ExtResource("4_7m6cs")
-player = NodePath("../Jugador")
 
 [node name="Enemigo" parent="." unique_id=779072344 instance=ExtResource("4_bob6j")]
 position = Vector2(-41, 188)
