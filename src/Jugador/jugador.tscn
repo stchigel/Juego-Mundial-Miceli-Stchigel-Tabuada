@@ -374,7 +374,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_st6w5"]
-size = Vector2(11, 41.5)
+size = Vector2(11, 54.75)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=610521422 node_paths=PackedStringArray("animacion") groups=["player"]]
 collision_layer = 2
@@ -390,5 +390,5 @@ frame = 3
 frame_progress = 0.74332523
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404508243]
-position = Vector2(-9, 6)
+position = Vector2(-9, 12.625)
 shape = SubResource("RectangleShape2D_st6w5")
