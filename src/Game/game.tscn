@@ -1,23 +1,8 @@
-[gd_scene format=4 uid="uid://ck34qefhskcmu"]
+[gd_scene format=3 uid="uid://ck34qefhskcmu"]
 
 [ext_resource type="Script" uid="uid://vxgkhkh5drbt" path="res://src/Game/game.gd" id="1_60cvd"]
-[ext_resource type="TileSet" uid="uid://h8w45y7y0nlx" path="res://assets/terreno.tres" id="2_7m6cs"]
-[ext_resource type="PackedScene" uid="uid://cleow4sev1af3" path="res://src/Jugador/jugador.tscn" id="2_k6qo2"]
-[ext_resource type="PackedScene" uid="uid://cl7y0xndtta35" path="res://src/Enemigo/enemigo.tscn" id="4_bob6j"]
-[ext_resource type="PackedScene" uid="uid://ts66bmchdr11" path="res://src/Obstaculos/obstaculo_2.tscn" id="7_le6wr"]
+[ext_resource type="PackedScene" uid="uid://derql014dgbee" path="res://src/nivelPrueba/nivelPrueba.tscn" id="2_le6wr"]
 
 [node name="Game" type="Node2D" unique_id=1937971750]
 script = ExtResource("1_60cvd")
-
-[node name="nivel" type="TileMapLayer" parent="." unique_id=512492040]
-tile_map_data = PackedByteArray("AAD//wgAAAAAAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAAAAAADAAgAAAABAAAAAAAEAAgAAAABAAAAAAAFAAgAAAABAAAAAAAGAAgAAAABAAAAAAAHAAgAAAABAAAAAAAIAAgAAAABAAAAAAAJAAgAAAABAAAAAAAKAAgAAAABAAAAAAALAAgAAAABAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAOAAgAAAABAAAAAAAPAAgAAAABAAAAAAAQAAgAAAABAAAAAAARAAgAAAABAAAAAAASAAgAAAABAAAAAAATAAgAAAABAAAAAAAUAAgAAAABAAAAAAAVAAgAAAABAAAAAAAWAAgAAAABAAAAAAAXAAgAAAABAAAAAAAYAAgAAAABAAAAAAAZAAgAAAABAAAAAAAaAAgAAAABAAAAAAAbAAgAAAABAAAAAAAcAAgAAAABAAAAAAAdAAgAAAABAAAAAAAeAAgAAAABAAAAAAAfAAgAAAABAAAAAAAgAAgAAAABAAAAAAAhAAgAAAABAAAAAAAiAAgAAAABAAAAAAAjAAgAAAABAAAAAAAkAAgAAAABAAAAAAAlAAgAAAABAAAAAAAmAAgAAAABAAAAAAAnAAgAAAABAAAAAAAoAAgAAAABAAAAAAApAAgAAAABAAAAAAAqAAgAAAABAAAAAAArAAgAAAABAAAAAAAsAAgAAAACAAAAAAAQAAQAAAABAAMAAAARAAQAAAABAAMAAAASAAQAAAACAAMAAAAPAAQAAAAAAAMAAAAVAAQAAAADAAAAAAAVAAUAAAADAAIAAAAOAAUAAAADAAMAAAA=")
-tile_set = ExtResource("2_7m6cs")
-
-[node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_k6qo2")]
-position = Vector2(219, 130)
-
-[node name="Enemigo" parent="." unique_id=779072344 instance=ExtResource("4_bob6j")]
-position = Vector2(-41, 188)
-
-[node name="Trampolin" parent="." unique_id=1417891563 instance=ExtResource("7_le6wr")]
-position = Vector2(774, 147)
+niveles = Array[PackedScene]([ExtResource("2_le6wr")])
