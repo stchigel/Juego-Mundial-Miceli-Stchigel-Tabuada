@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gxkt7hdaqpum"
-path="res://.godot/imported/diegoQuieto.png-5fa2073af2d55c384d69c4b0c0362fa4.ctex"
+uid="uid://dunv5282gftao"
+path="res://.godot/imported/diegoIdle.png-b8fdb617904abfe7a5a6ad9876fb87cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/diegoQuieto.png"
-dest_files=["res://.godot/imported/diegoQuieto.png-5fa2073af2d55c384d69c4b0c0362fa4.ctex"]
+source_file="res://assets/diegoIdle.png"
+dest_files=["res://.godot/imported/diegoIdle.png-b8fdb617904abfe7a5a6ad9876fb87cc.ctex"]
 
 [params]
 
