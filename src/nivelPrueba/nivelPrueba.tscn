@@ -18,10 +18,10 @@ tile_map_data = PackedByteArray("AAD//wgAAAAAAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAA
 tile_set = ExtResource("1_2y6mm")
 
 [node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_3tpv4")]
-position = Vector2(224, 210)
+position = Vector2(226, 218)
 
 [node name="Enemigo" parent="." unique_id=1105322210 instance=ExtResource("3_spax3")]
-position = Vector2(-1, 172)
+position = Vector2(24, 193)
 
 [node name="Trampolin" parent="." unique_id=1700234561 instance=ExtResource("4_ukesl")]
 position = Vector2(774, 147)
@@ -29,7 +29,7 @@ position = Vector2(774, 147)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1294535101]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(287.255, 210)
+position = Vector2(289.255, 217)
 limit_left = -64
 limit_top = 0
 limit_right = 1504
@@ -43,7 +43,7 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=2059355826 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(287.255, 210)
+position = Vector2(289.255, 218)
 script = ExtResource("6_ff6ov")
 priority = 5
 follow_mode = 2

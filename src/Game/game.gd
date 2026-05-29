@@ -9,13 +9,22 @@ var _nivelActualNodo: Node
 func _ready() -> void:
 	_crearNivel(_nivelActualNumero)
 
-
-func perder():
-	print("Perdiste")
-	if get_tree():
-		get_tree().change_scene_to_file("res://src/Menu/menu.tscn")
-
-
 func _crearNivel(numeroNivel :int):
 	_nivelActualNodo=niveles[numeroNivel-1].instantiate()
 	add_child(_nivelActualNodo)
+	
+	#esto es para esperar 1 fotograma a que el niel viejo se borre
+	await get_tree().process_frame
+	#sino al hacer la logica que esta debajo, godot no sabe si agarrar
+	#al personaje del nivel anterior o al que se creó recien, entonces
+	#esperamos 1 fotograma para que se elimine el anterior y 
+	#solo haya q agarrar el recien creado :) 
+	
+	var enemigo = get_tree().get_first_node_in_group("enemigo")
+	if enemigo:
+		enemigo.matarJugador.connect(_reiniciarNivel)
+
+func _reiniciarNivel():
+	_nivelActualNodo.queue_free()
+	_crearNivel.call_deferred(_nivelActualNumero)
+	
