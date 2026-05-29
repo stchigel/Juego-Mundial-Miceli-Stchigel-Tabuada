@@ -4,6 +4,8 @@ extends CharacterBody2D
 const _velocidad = 200.0
 const _velocidad_salto = -400.0
 
+func saltar():
+	velocity.y = _velocidad_salto
 
 func _physics_process(delta: float) -> void:
 	#gravedad 
@@ -12,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 		#animacion.play("saltar")
-		velocity.y = _velocidad_salto
+		saltar()
 
 	if Input.is_action_pressed("derecha"):
 		animacion.flip_h=false
