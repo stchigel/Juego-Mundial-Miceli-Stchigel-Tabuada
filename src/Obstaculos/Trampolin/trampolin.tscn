@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ddhte46iie05o" path="res://assets/red-elastic-trampoline-for-jumping-business-and-funny-concept-3d-rendering-png.webp" id="1_i4n5f"]
 [ext_resource type="Script" uid="uid://d3ykpmkgvuw6k" path="res://src/Obstaculos/Trampolin/trampolin.gd" id="1_vionb"]
+[ext_resource type="Texture2D" uid="uid://cms3mg0ks7lli" path="res://assets/trampolin-roto-removebg-preview.png" id="3_auyyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4n5f"]
 size = Vector2(71, 39)
@@ -12,9 +13,15 @@ size = Vector2(71, 16)
 [node name="Trampolin" type="Node2D" unique_id=1496053890 groups=["obstaculo"]]
 script = ExtResource("1_vionb")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=205925226]
+[node name="Bien" type="Sprite2D" parent="." unique_id=205925226]
+z_index = -1
 scale = Vector2(0.06122448, 0.061224494)
 texture = ExtResource("1_i4n5f")
+
+[node name="Roto" type="Sprite2D" parent="." unique_id=1007412278]
+z_index = -1
+scale = Vector2(0.14705881, 0.14705883)
+texture = ExtResource("3_auyyb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1760787664]
 collision_layer = 16
