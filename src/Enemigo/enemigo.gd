@@ -24,13 +24,14 @@ func _physics_process(delta: float) -> void:
 		_actualizar_player()
 	
 	if is_instance_valid(_player):
-		var delta_y = _player.position.y - position.y
-		if abs(delta_y) < TRACKING_DEADZONE:
-			velocity.y = 0
-		elif delta_y < 0:
-			velocity.y = -VERTICAL_SPEED
-		else:
-			velocity.y = VERTICAL_SPEED
+		#var delta_y = _player.position.y - position.y
+		#if abs(delta_y) < TRACKING_DEADZONE:
+			#velocity.y = 0
+		#elif delta_y < 0:
+			#velocity.y = -VERTICAL_SPEED
+		#else:
+			#velocity.y = VERTICAL_SPEED
+		pass
 	else:
 		velocity.y = 0
 	
