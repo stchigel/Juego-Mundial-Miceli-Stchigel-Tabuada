@@ -23,8 +23,15 @@ func _crearNivel(numeroNivel :int):
 	var enemigo = get_tree().get_first_node_in_group("enemigo")
 	if enemigo:
 		enemigo.matarJugador.connect(_reiniciarNivel)
+		
+	var copa = get_tree().get_first_node_in_group("copa")
+	if copa:
+		copa.pasarNivelSenal.connect(_pasarNivel)
 
 func _reiniciarNivel():
 	_nivelActualNodo.queue_free()
 	_crearNivel.call_deferred(_nivelActualNumero)
 	
+func _pasarNivel():
+	_nivelActualNumero +=1
+	_reiniciarNivel()

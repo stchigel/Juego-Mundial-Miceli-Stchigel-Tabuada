@@ -37,6 +37,7 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 player="player"
 obstaculo="obstaculo"
 enemigo="enemigo del nivel"
+copa="copa del mundo (para pasar nivel)"
 
 [input]
 
@@ -65,6 +66,7 @@ izquierda={
 2d_physics/layer_1="solido"
 2d_physics/layer_2="jugador"
 2d_physics/layer_3="enemigo"
+2d_physics/layer_4="copa"
 
 [physics]
 

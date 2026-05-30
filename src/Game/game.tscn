@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://vxgkhkh5drbt" path="res://src/Game/game.gd" id="1_60cvd"]
 [ext_resource type="PackedScene" uid="uid://derql014dgbee" path="res://src/nivelPrueba/nivelPrueba.tscn" id="2_le6wr"]
+[ext_resource type="PackedScene" uid="uid://baga5gnbhlx3k" path="res://src/nivelPrueba1/nivelPrueba.tscn" id="3_sag4g"]
 
 [node name="Game" type="Node2D" unique_id=1937971750]
 script = ExtResource("1_60cvd")
-niveles = Array[PackedScene]([ExtResource("2_le6wr")])
+niveles = Array[PackedScene]([ExtResource("2_le6wr"), ExtResource("3_sag4g")])
