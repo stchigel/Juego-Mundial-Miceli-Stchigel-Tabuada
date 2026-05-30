@@ -9,7 +9,7 @@ size = Vector2(71, 39)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vionb"]
 size = Vector2(71, 16)
 
-[node name="Trampolin" type="Node2D" unique_id=1496053890]
+[node name="Trampolin" type="Node2D" unique_id=1496053890 groups=["obstaculo"]]
 script = ExtResource("1_vionb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=205925226]
