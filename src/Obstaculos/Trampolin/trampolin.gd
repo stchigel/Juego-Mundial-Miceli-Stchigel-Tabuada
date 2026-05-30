@@ -10,6 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func destruir():
+	queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.get("_alturaSaltoTrampolin"):

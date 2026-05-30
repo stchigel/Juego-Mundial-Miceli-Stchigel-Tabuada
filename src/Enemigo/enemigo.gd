@@ -19,10 +19,10 @@ func _actualizar_player() -> void:
 
 func _physics_process(delta: float) -> void:
 	velocity.x = SPEED
-
+	
 	if not is_instance_valid(_player):
 		_actualizar_player()
-
+	
 	if is_instance_valid(_player):
 		var delta_y = _player.position.y - position.y
 		if abs(delta_y) < TRACKING_DEADZONE:
@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = VERTICAL_SPEED
 	else:
 		velocity.y = 0
-
+	
 	move_and_slide()
 
 
@@ -41,3 +41,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print("matar jugador")
 		emit_signal("matarJugador")
+	if body.is_in_group("obstaculo"):
+		print("obstaculo destruido")
+		body.destruir()

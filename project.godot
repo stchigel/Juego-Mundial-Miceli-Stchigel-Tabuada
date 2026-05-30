@@ -67,6 +67,7 @@ izquierda={
 2d_physics/layer_2="jugador"
 2d_physics/layer_3="enemigo"
 2d_physics/layer_4="copa"
+2d_physics/layer_5="obstaculo"
 
 [physics]
 
