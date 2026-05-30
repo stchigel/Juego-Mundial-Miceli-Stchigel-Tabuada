@@ -251,11 +251,10 @@ script = ExtResource("1_ik87k")
 animacion = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=93269876]
-position = Vector2(-11.000001, -0.9999995)
+position = Vector2(0, -1.9999999)
 scale = Vector2(0.6221804, 0.6331169)
 sprite_frames = SubResource("SpriteFrames_4qg1c")
-animation = &"correr"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404508243]
-position = Vector2(-11, 0.8125)
 shape = SubResource("RectangleShape2D_st6w5")
