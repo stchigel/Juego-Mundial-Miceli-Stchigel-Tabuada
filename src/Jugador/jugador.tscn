@@ -246,7 +246,6 @@ size = Vector2(11, 36.375)
 
 [node name="Jugador" type="CharacterBody2D" unique_id=610521422 node_paths=PackedStringArray("animacion") groups=["player"]]
 collision_layer = 2
-collision_mask = 5
 script = ExtResource("1_ik87k")
 animacion = NodePath("AnimatedSprite2D")
 
@@ -258,3 +257,4 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1404508243]
 shape = SubResource("RectangleShape2D_st6w5")
+debug_color = Color(1, 0, 0, 0.37254903)

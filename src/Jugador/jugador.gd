@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var animacion: AnimatedSprite2D
 const _velocidad = 200.0
 const _alturaSalto = -400.0
-const _alturaSaltoTrampolin = -500.0
+const alturaSaltoTrampolin = -500.0
 
 func saltar():
 	velocity.y = _alturaSalto

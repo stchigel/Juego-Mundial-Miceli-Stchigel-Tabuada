@@ -8,7 +8,7 @@
 size = Vector2(71, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vionb"]
-size = Vector2(71, 16)
+size = Vector2(51, 8)
 
 [node name="Trampolin" type="Node2D" unique_id=1496053890 groups=["obstaculo"]]
 script = ExtResource("1_vionb")
@@ -19,13 +19,14 @@ scale = Vector2(0.06122448, 0.061224494)
 texture = ExtResource("1_i4n5f")
 
 [node name="Roto" type="Sprite2D" parent="." unique_id=1007412278]
+visible = false
 z_index = -1
 scale = Vector2(0.14705881, 0.14705883)
 texture = ExtResource("3_auyyb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1760787664]
-collision_layer = 16
-collision_mask = 5
+collision_layer = 17
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=923769245]
 position = Vector2(0.5, 9.5)
@@ -33,10 +34,11 @@ shape = SubResource("RectangleShape2D_i4n5f")
 debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1848044125 groups=["obstaculo"]]
+collision_layer = 17
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1763633861]
-position = Vector2(0, -10)
+position = Vector2(0.5, -14)
 shape = SubResource("RectangleShape2D_vionb")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

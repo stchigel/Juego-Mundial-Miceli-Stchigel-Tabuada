@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://br54lt4axmpt8" path="res://assets/copaMundial.png" id="1_vjefn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1xon"]
-size = Vector2(10, 20)
+size = Vector2(10, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vjefn"]
-size = Vector2(26, 41.5)
+size = Vector2(26, 52)
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=1146676087 groups=["copa"]]
 script = ExtResource("1_e1xon")
@@ -17,6 +17,7 @@ scale = Vector2(0.029594097, 0.029594097)
 texture = ExtResource("1_vjefn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591961925]
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_e1xon")
 debug_color = Color(1, 0, 0, 0.41960785)
 
@@ -25,7 +26,6 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=165853777]
-position = Vector2(0, 5.25)
 shape = SubResource("RectangleShape2D_vjefn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

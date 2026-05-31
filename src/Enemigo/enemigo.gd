@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
-const JUMP_VELOCITY = -400.0
-const VERTICAL_SPEED = 80.0
-const TRACKING_DEADZONE = 10.0
+const _velocidad = 100.0
+const _alturaSalto = 80.0
+const _trackingDeadzone = 10.0
 
 signal matarJugador
 
@@ -17,20 +16,20 @@ func _actualizar_player() -> void:
 	_player = jugadores[0] if not jugadores.is_empty() else null
 
 
-func _physics_process(delta: float) -> void:
-	velocity.x = SPEED
+func _physics_process(_delta: float) -> void:
+	velocity.x = _velocidad
 	
 	if not is_instance_valid(_player):
 		_actualizar_player()
 	
 	if is_instance_valid(_player):
 		#var delta_y = _player.position.y - position.y
-		#if abs(delta_y) < TRACKING_DEADZONE:
+		#if abs(delta_y) < _trackingDeadzone:
 			#velocity.y = 0
 		#elif delta_y < 0:
-			#velocity.y = -VERTICAL_SPEED
+			#velocity.y = -_alturaSalto
 		#else:
-			#velocity.y = VERTICAL_SPEED
+			#velocity.y = _alturaSalto
 		pass
 	else:
 		velocity.y = 0
