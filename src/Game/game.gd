@@ -26,13 +26,14 @@ func _crearNivel(numeroNivel :int):
 	var copa = get_tree().get_first_node_in_group("copa")
 	if copa:
 		copa.pasarNivelSenal.connect(_pasarNivel)
+		copa.destruidoSenal.connect(_perderNivel)
 
 func reiniciarNivel():
 	_nivelActualNodo.queue_free()
 	_crearNivel.call_deferred(GlobalGameManager.nivel_actual)
 
 func _perderNivel():
-	get_tree().change_scene_to_file("res://src/Perdiste/perdiste.tscn")
+	get_tree().change_scene_to_file.call_deferred("res://src/Perdiste/perdiste.tscn")
 
 func _pasarNivel():
 	# Guardamos el avance de forma global

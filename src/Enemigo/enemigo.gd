@@ -9,6 +9,7 @@ signal matarJugador
 var _player: Node2D
 
 func _ready() -> void:
+	$AnimatedSprite2D.play()
 	_actualizar_player()
 
 func _actualizar_player() -> void:
@@ -41,6 +42,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print("matar jugador")
 		emit_signal("matarJugador")
+	if body.is_in_group("copa"):
+		print("copa destruida")
+		body.destruir()
 	if body.get_parent().is_in_group("obstaculo"):
 		print("obstaculo destruido")
 		body.get_parent().destruir()

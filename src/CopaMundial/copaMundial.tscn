@@ -10,6 +10,8 @@ size = Vector2(10, 44)
 size = Vector2(26, 52)
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=1146676087 groups=["copa"]]
+collision_layer = 17
+collision_mask = 5
 script = ExtResource("1_e1xon")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=526468847]

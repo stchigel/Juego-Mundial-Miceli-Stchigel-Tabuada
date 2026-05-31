@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3vfduwejlkxj"]
 
 [ext_resource type="Script" uid="uid://be7oq434moe3v" path="res://src/Perdiste/perdiste.gd" id="1_ihstw"]
+[ext_resource type="Texture2D" uid="uid://dxcm4p4snbpq6" path="res://assets/perdiste.png" id="2_ktq0n"]
 
 [node name="Perdiste" type="Control" unique_id=1489303257]
 layout_mode = 3
@@ -11,11 +12,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ihstw")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1607708804]
+[node name="Fondo" type="TextureRect" parent="." unique_id=1139308108]
+modulate = Color(1, 1, 1, 0.39215687)
 layout_mode = 0
-offset_right = 505.0
-offset_bottom = 289.0
-color = Color(0, 0.37995228, 0.38010192, 1)
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("2_ktq0n")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1061520947]
 layout_mode = 1
