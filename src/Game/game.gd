@@ -2,12 +2,11 @@ extends Node2D
 
 @export var niveles: Array[PackedScene]
 
-var _nivelActualNumero: int =1
 var _nivelActualNodo: Node 
 
-# llamado una vez cuando se instancia por 1era vez la escena
 func _ready() -> void:
-	_crearNivel(_nivelActualNumero)
+	# Ahora lee el nivel desde el Singleton global
+	_crearNivel(GlobalGameManager.nivel_actual)
 
 func _crearNivel(numeroNivel :int):
 	_nivelActualNodo=niveles[numeroNivel-1].instantiate()
@@ -28,13 +27,14 @@ func _crearNivel(numeroNivel :int):
 	if copa:
 		copa.pasarNivelSenal.connect(_pasarNivel)
 
-func _reiniciarNivel():
+func reiniciarNivel():
 	_nivelActualNodo.queue_free()
-	_crearNivel.call_deferred(_nivelActualNumero)
+	_crearNivel.call_deferred(GlobalGameManager.nivel_actual)
 
 func _perderNivel():
 	get_tree().change_scene_to_file("res://src/Perdiste/perdiste.tscn")
 
 func _pasarNivel():
-	_nivelActualNumero +=1
-	_reiniciarNivel()
+	# Guardamos el avance de forma global
+	GlobalGameManager.nivel_actual += 1
+	reiniciarNivel()
