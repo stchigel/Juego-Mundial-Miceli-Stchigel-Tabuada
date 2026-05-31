@@ -10,9 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://n2lhstemq5ga" path="res://src/Obstaculos/Caja/caja.tscn" id="9_4llue"]
 [ext_resource type="PackedScene" uid="uid://dwf720n642wuu" path="res://src/Obstaculos/Trampolin/trampolin.tscn" id="9_5fu67"]
 [ext_resource type="Texture2D" uid="uid://dh5yfq68g1nkw" path="res://assets/nada.png" id="10_4llue"]
+[ext_resource type="Script" uid="uid://ct8gvpew0u24n" path="res://src/Niveles/path_follow_2d.gd" id="11_q0pa1"]
 
 [sub_resource type="Resource" id="Resource_4llue"]
 script = ExtResource("7_5fu67")
+
+[sub_resource type="Curve2D" id="Curve2D_4llue"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 232, 0, 0, 0, 0, 361, 231, 0, 0, 0, 0, 942, 232)
+}
+point_count = 3
 
 [node name="NivelPrueba" type="Node2D" unique_id=371642731]
 
@@ -64,9 +71,6 @@ horizontal_alignment = 1
 [node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_3tpv4")]
 position = Vector2(252, 234)
 
-[node name="Enemigo" parent="." unique_id=1105322210 instance=ExtResource("3_spax3")]
-position = Vector2(-23, 210)
-
 [node name="RigidBody2D" parent="." unique_id=1146676087 instance=ExtResource("8_ff6ov")]
 position = Vector2(970, 230)
 
@@ -100,7 +104,7 @@ limit_target = NodePath("../nivel")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Trampolin2" parent="." unique_id=1496053890 instance=ExtResource("9_5fu67")]
-position = Vector2(403, 227)
+position = Vector2(401, 245)
 
 [node name="Cajas1" type="Node" parent="." unique_id=220865094]
 
@@ -157,3 +161,16 @@ position = Vector2(777, 245)
 
 [node name="Caja26" parent="Cajas1" unique_id=1472269343 instance=ExtResource("9_4llue")]
 position = Vector2(799, 245)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1373761209]
+curve = SubResource("Curve2D_4llue")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1304381382]
+position = Vector2(1, 232)
+rotation = -0.0027777706
+script = ExtResource("11_q0pa1")
+
+[node name="Enemigo" parent="Path2D/PathFollow2D" unique_id=1105322210 instance=ExtResource("3_spax3")]
+position = Vector2(3.9972076, 1.0111084)
+rotation = 0.0027777706
+scale = Vector2(1.0000001, 1.0000001)

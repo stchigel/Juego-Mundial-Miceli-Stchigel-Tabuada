@@ -1,27 +1,28 @@
 [gd_scene format=3 uid="uid://dwf720n642wuu"]
 
-[ext_resource type="Texture2D" uid="uid://ddhte46iie05o" path="res://assets/red-elastic-trampoline-for-jumping-business-and-funny-concept-3d-rendering-png.webp" id="1_i4n5f"]
 [ext_resource type="Script" uid="uid://d3ykpmkgvuw6k" path="res://src/Obstaculos/Trampolin/trampolin.gd" id="1_vionb"]
-[ext_resource type="Texture2D" uid="uid://cms3mg0ks7lli" path="res://assets/trampolin-roto-removebg-preview.png" id="3_auyyb"]
+[ext_resource type="Texture2D" uid="uid://beim6msklb662" path="res://assets/trampolin.png" id="2_auyyb"]
+[ext_resource type="Texture2D" uid="uid://bi21uks7pahv6" path="res://assets/trampolinRoto.png" id="3_auyyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4n5f"]
-size = Vector2(71, 39)
+size = Vector2(93.5, 16.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vionb"]
-size = Vector2(51, 8)
+size = Vector2(83, 2)
 
 [node name="Trampolin" type="Node2D" unique_id=1496053890 groups=["obstaculo"]]
 script = ExtResource("1_vionb")
 
 [node name="Bien" type="Sprite2D" parent="." unique_id=205925226]
 z_index = -1
-scale = Vector2(0.06122448, 0.061224494)
-texture = ExtResource("1_i4n5f")
+scale = Vector2(0.15938777, 0.132)
+texture = ExtResource("2_auyyb")
 
 [node name="Roto" type="Sprite2D" parent="." unique_id=1007412278]
 visible = false
 z_index = -1
-scale = Vector2(0.14705881, 0.14705883)
+position = Vector2(-0.99998856, -2.9999962)
+scale = Vector2(0.07157628, 0.07157629)
 texture = ExtResource("3_auyyb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1760787664]
@@ -29,7 +30,7 @@ collision_layer = 17
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=923769245]
-position = Vector2(0.5, 9.5)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_i4n5f")
 debug_color = Color(1, 0, 0, 0.41960785)
 
@@ -38,7 +39,7 @@ collision_layer = 17
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1763633861]
-position = Vector2(0.5, -14)
+position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_vionb")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
