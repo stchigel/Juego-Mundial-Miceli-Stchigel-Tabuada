@@ -1,16 +1,40 @@
 extends Node2D
 
+@export var niveles: Array[PackedScene]
 
-# Called when the node enters the scene tree for the first time.
+var _nivelActualNumero: int =1
+var _nivelActualNodo: Node 
+
+# llamado una vez cuando se instancia por 1era vez la escena
 func _ready() -> void:
-	pass # Replace with function body.
+	_crearNivel(_nivelActualNumero)
 
+func _crearNivel(numeroNivel :int):
+	_nivelActualNodo=niveles[numeroNivel-1].instantiate()
+	add_child(_nivelActualNodo)
+	
+	#esto es para esperar 1 fotograma a que el niel viejo se borre
+	await get_tree().process_frame
+	#sino al hacer la logica que esta debajo, godot no sabe si agarrar
+	#al personaje del nivel anterior o al que se creó recien, entonces
+	#esperamos 1 fotograma para que se elimine el anterior y 
+	#solo haya q agarrar el recien creado :) 
+	
+	var enemigo = get_tree().get_first_node_in_group("enemigo")
+	if enemigo:
+		enemigo.matarJugador.connect(_perderNivel)
+		
+	var copa = get_tree().get_first_node_in_group("copa")
+	if copa:
+		copa.pasarNivelSenal.connect(_pasarNivel)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _reiniciarNivel():
+	_nivelActualNodo.queue_free()
+	_crearNivel.call_deferred(_nivelActualNumero)
 
-func perder():
-	print("Perdiste")
-	if get_tree():
-		get_tree().change_scene_to_file("res://src/Menu/menu.tscn")
+func _perderNivel():
+	get_tree().change_scene_to_file("res://src/Perdiste/perdiste.tscn")
+
+func _pasarNivel():
+	_nivelActualNumero +=1
+	_reiniciarNivel()

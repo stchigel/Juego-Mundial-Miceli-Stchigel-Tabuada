@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwuwgkvhupbgx"
-path="res://.godot/imported/diegoteCorre.png-ac0711970a59ebf16ec0a496d21351b3.ctex"
+uid="uid://cms3mg0ks7lli"
+path="res://.godot/imported/trampolin-roto-removebg-preview.png-cb5d6cb21e2764d1bf9ce6085cfcbd98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/diegoteCorre.png"
-dest_files=["res://.godot/imported/diegoteCorre.png-ac0711970a59ebf16ec0a496d21351b3.ctex"]
+source_file="res://assets/trampolin-roto-removebg-preview.png"
+dest_files=["res://.godot/imported/trampolin-roto-removebg-preview.png-cb5d6cb21e2764d1bf9ce6085cfcbd98.ctex"]
 
 [params]
 

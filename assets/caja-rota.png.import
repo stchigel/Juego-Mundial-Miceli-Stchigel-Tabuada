@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm818b0winmfc"
-path="res://.godot/imported/diegoCorre.png-d1d2f184dae76646a127ff72a5919e31.ctex"
+uid="uid://scyv1xdgmxg1"
+path="res://.godot/imported/caja-rota.png-e65ecb77cc31f14a3c9eb0f8f7bc7348.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/diegoCorre.png"
-dest_files=["res://.godot/imported/diegoCorre.png-d1d2f184dae76646a127ff72a5919e31.ctex"]
+source_file="res://assets/caja-rota.png"
+dest_files=["res://.godot/imported/caja-rota.png-e65ecb77cc31f14a3c9eb0f8f7bc7348.ctex"]
 
 [params]
 

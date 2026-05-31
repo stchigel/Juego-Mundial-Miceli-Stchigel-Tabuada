@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkjhda6eltb6c"
-path="res://.godot/imported/Captura desde 2026-05-26 11-47-23.png-669e68147bb285f7a3b20bb8ea681735.ctex"
+uid="uid://ca622wt51pt5l"
+path="res://.godot/imported/caja.png-ff4c87b65dc50f9ac3f1e7c4a1ec970f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Captura desde 2026-05-26 11-47-23.png"
-dest_files=["res://.godot/imported/Captura desde 2026-05-26 11-47-23.png-669e68147bb285f7a3b20bb8ea681735.ctex"]
+source_file="res://assets/caja.png"
+dest_files=["res://.godot/imported/caja.png-ff4c87b65dc50f9ac3f1e7c4a1ec970f.ctex"]
 
 [params]
 

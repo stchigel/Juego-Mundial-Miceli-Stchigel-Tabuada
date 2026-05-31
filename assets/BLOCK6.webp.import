@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1iouso1gsfby"
-path="res://.godot/imported/diegoteSalta.png-3db7dc01e9ee0d2536528adf97b86500.ctex"
+uid="uid://xhmafhxatq8f"
+path="res://.godot/imported/BLOCK6.webp-0d582f0eded9637ba9814c83e8232984.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/diegoteSalta.png"
-dest_files=["res://.godot/imported/diegoteSalta.png-3db7dc01e9ee0d2536528adf97b86500.ctex"]
+source_file="res://assets/BLOCK6.webp"
+dest_files=["res://.godot/imported/BLOCK6.webp-0d582f0eded9637ba9814c83e8232984.ctex"]
 
 [params]
 
