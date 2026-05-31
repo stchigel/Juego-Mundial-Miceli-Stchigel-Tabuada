@@ -22,7 +22,7 @@ func _crearNivel(numeroNivel :int):
 	
 	var enemigo = get_tree().get_first_node_in_group("enemigo")
 	if enemigo:
-		enemigo.matarJugador.connect(_reiniciarNivel)
+		enemigo.matarJugador.connect(_perderNivel)
 		
 	var copa = get_tree().get_first_node_in_group("copa")
 	if copa:
@@ -31,7 +31,10 @@ func _crearNivel(numeroNivel :int):
 func _reiniciarNivel():
 	_nivelActualNodo.queue_free()
 	_crearNivel.call_deferred(_nivelActualNumero)
-	
+
+func _perderNivel():
+	get_tree().change_scene_to_file("res://src/Perdiste/perdiste.tscn")
+
 func _pasarNivel():
 	_nivelActualNumero +=1
 	_reiniciarNivel()
