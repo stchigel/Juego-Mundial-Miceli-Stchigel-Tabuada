@@ -11,11 +11,13 @@ size = Vector2(22, 22)
 script = ExtResource("1_2mu63")
 
 [node name="Bien" type="Sprite2D" parent="." unique_id=205925226]
+modulate = Color(0, 0.4626255, 1, 1)
 z_index = -1
 scale = Vector2(0.2682926, 0.26829267)
 texture = ExtResource("2_2mu63")
 
 [node name="Roto" type="Sprite2D" parent="." unique_id=1679895390]
+modulate = Color(0, 0.4006579, 1, 1)
 z_index = -1
 scale = Vector2(0.2682926, 0.26829267)
 texture = ExtResource("3_o8v0x")
@@ -25,5 +27,6 @@ collision_layer = 17
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=923769245]
+visible = false
 shape = SubResource("RectangleShape2D_i4n5f")
 debug_color = Color(1, 0, 0, 0.41960785)

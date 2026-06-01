@@ -19,6 +19,7 @@ scale = Vector2(0.029594097, 0.029594097)
 texture = ExtResource("1_vjefn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591961925]
+visible = false
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_e1xon")
 debug_color = Color(1, 0, 0, 0.41960785)
@@ -28,6 +29,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=165853777]
+visible = false
 shape = SubResource("RectangleShape2D_vjefn")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

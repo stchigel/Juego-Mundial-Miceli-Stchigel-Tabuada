@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://5todhxwlu6rk" path="res://src/CopaMundial/copaMundial.tscn" id="8_ff6ov"]
 [ext_resource type="PackedScene" uid="uid://n2lhstemq5ga" path="res://src/Obstaculos/Caja/caja.tscn" id="9_4llue"]
 [ext_resource type="PackedScene" uid="uid://dwf720n642wuu" path="res://src/Obstaculos/Trampolin/trampolin.tscn" id="9_5fu67"]
-[ext_resource type="Script" uid="uid://ct8gvpew0u24n" path="res://src/Niveles/path_follow_2d.gd" id="11_q0pa1"]
+[ext_resource type="Script" uid="uid://ct8gvpew0u24n" path="res://src/Nivel1/path_follow_2d.gd" id="11_q0pa1"]
 
 [sub_resource type="Resource" id="Resource_4llue"]
 script = ExtResource("7_5fu67")

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cleow4sev1af3"]
 
 [ext_resource type="Script" uid="uid://c4yolw0tx5asd" path="res://src/Jugador/jugador.gd" id="1_ik87k"]
-[ext_resource type="Texture2D" uid="uid://exe7k8h3ege4" path="res://assets/PayneCorre.png" id="2_43xsi"]
-[ext_resource type="Texture2D" uid="uid://cm818b0winmfc" path="res://assets/diegoCorre.png" id="3_33wyl"]
-[ext_resource type="Texture2D" uid="uid://dunv5282gftao" path="res://assets/diegoIdle.png" id="3_pivei"]
-[ext_resource type="Texture2D" uid="uid://dql2m6uuxf7lq" path="res://assets/PayneIdle.png" id="5_11q4q"]
+[ext_resource type="Texture2D" uid="uid://exe7k8h3ege4" path="res://assets/Personajes/PayneCorre.png" id="2_43xsi"]
+[ext_resource type="Texture2D" uid="uid://cm818b0winmfc" path="res://assets/Personajes/diegoCorre.png" id="3_33wyl"]
+[ext_resource type="Texture2D" uid="uid://dunv5282gftao" path="res://assets/Personajes/diegoIdle.png" id="3_pivei"]
+[ext_resource type="Texture2D" uid="uid://dql2m6uuxf7lq" path="res://assets/Personajes/PayneIdle.png" id="5_11q4q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q1ark"]
 atlas = ExtResource("2_43xsi")

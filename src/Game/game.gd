@@ -23,6 +23,10 @@ func _crearNivel(numeroNivel :int):
 	if enemigo:
 		enemigo.matarJugador.connect(_perderNivel)
 		
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.matarJugador.connect(_perderNivel)
+	
 	var copa = get_tree().get_first_node_in_group("copa")
 	if copa:
 		copa.pasarNivelSenal.connect(_pasarNivel)
