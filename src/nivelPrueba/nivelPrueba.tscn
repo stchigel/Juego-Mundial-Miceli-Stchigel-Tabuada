@@ -186,6 +186,7 @@ curve = SubResource("Curve2D_4llue")
 position = Vector2(1, 232)
 rotation = -0.0027777706
 script = ExtResource("11_q0pa1")
+velocidad = 120.0
 
 [node name="Enemigo" parent="Path2D/PathFollow2D" unique_id=1105322210 instance=ExtResource("3_spax3")]
 position = Vector2(-56.34145, -237.15741)
