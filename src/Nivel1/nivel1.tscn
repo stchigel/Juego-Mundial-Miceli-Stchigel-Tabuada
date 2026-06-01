@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dwf720n642wuu" path="res://src/Obstaculos/Trampolin/trampolin.tscn" id="10_fb1uc"]
 [ext_resource type="PackedScene" uid="uid://c730e1p1l2hed" path="res://src/Obstaculos/TrampolinChico/trampolinChico.tscn" id="11_lcsbq"]
 [ext_resource type="Theme" uid="uid://dcd6ajsobniap" path="res://temas/tema_ingame.tres" id="17_ptd1b"]
+[ext_resource type="Texture2D" uid="uid://ckboidv1754lg" path="res://assets/MapaEEUU/CarritoPanchos.png" id="18_pdldd"]
 
 [sub_resource type="Resource" id="Resource_1swxr"]
 script = ExtResource("7_uphlu")
@@ -34,9 +35,9 @@ metadata/_custom_type_script = "uid://dimvdouy8g0sv"
 
 [sub_resource type="Curve2D" id="Curve2D_sckn0"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -2, 223, 0, 0, 0, 0, 1738, 225, 0, 0, 0, 0, 1809, 139, 0, 0, 0, 0, 1906, 66, 0, 0, 0, 0, 2191, 67)
+"points": PackedVector2Array(0, 0, 0, 0, -2, 223, 0, 0, 0, 0, 1354, 232, 0, 0, 0, 0, 1738, 225, 0, 0, 0, 0, 1809, 139, 0, 0, 0, 0, 1906, 66, 0, 0, 0, 0, 2191, 67)
 }
-point_count = 5
+point_count = 6
 
 [node name="Nivel1" type="Node2D" unique_id=1322224614]
 
@@ -255,6 +256,7 @@ position = Vector2(3019, 218)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1878448171]
 physics_interpolation_mode = 1
+top_level = true
 position = Vector2(243, 207)
 zoom = Vector2(0.985, 0.985)
 
@@ -398,6 +400,11 @@ position = Vector2(1840, 158)
 
 [node name="Trampolin3" parent="Node" unique_id=84628241 instance=ExtResource("10_fb1uc")]
 position = Vector2(2309, 245)
+
+[node name="WatermarkedImg5223112013547282194RemovebgPreview" type="Sprite2D" parent="." unique_id=1090700011]
+position = Vector2(1292, 220)
+scale = Vector2(0.35946736, 0.19986448)
+texture = ExtResource("18_pdldd")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
