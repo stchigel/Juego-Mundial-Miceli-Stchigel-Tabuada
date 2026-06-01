@@ -2,8 +2,20 @@ extends CharacterBody2D
 
 signal matarJugador
 
+@onready var animacion = $AnimatedSprite2D 
+var posicion_anterior: Vector2
+
 func _ready() -> void:
-	$AnimatedSprite2D.play()
+	posicion_anterior = global_position
+
+func _physics_process(_delta: float) -> void:
+	# Si la posición actual es diferente a la del frame anterior, se está moviendo
+	if global_position.distance_to(posicion_anterior) > 0.1:
+		animacion.play("correr")
+	else:
+		animacion.play("idle")
+	# Actualizamos la posición para el frame siguiente
+	posicion_anterior = global_position
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

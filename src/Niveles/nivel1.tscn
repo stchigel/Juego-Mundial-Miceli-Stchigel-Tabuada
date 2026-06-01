@@ -30,9 +30,9 @@ metadata/_custom_type_script = "uid://dimvdouy8g0sv"
 
 [sub_resource type="Curve2D" id="Curve2D_sckn0"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -2, 223, 0, 0, 0, 0, 1931, 223)
+"points": PackedVector2Array(0, 0, 0, 0, -2, 223, 0, 0, 0, 0, 1738, 225, 0, 0, 0, 0, 1809, 139, 0, 0, 0, 0, 1906, 66, 0, 0, 0, 0, 2191, 67)
 }
-point_count = 2
+point_count = 5
 
 [node name="Nivel1" type="Node2D" unique_id=1322224614]
 
@@ -42,7 +42,7 @@ tile_map_data = PackedByteArray("AAD//wgAAAABAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAA
 tile_set = ExtResource("1_sckn0")
 
 [node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_cjegp")]
-position = Vector2(1972, 65)
+position = Vector2(143, 237)
 
 [node name="RigidBody2D" parent="." unique_id=1146676087 instance=ExtResource("4_fb1uc")]
 position = Vector2(2988, 217)
@@ -50,7 +50,7 @@ position = Vector2(2988, 217)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1878448171]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(2069.535, 65)
+position = Vector2(243, 217)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1752660864]
 process_priority = 300
@@ -60,14 +60,17 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=758979383 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(2069.535, 65)
+position = Vector2(243, 217)
 script = ExtResource("6_j00vu")
 priority = 5
-follow_mode = 2
+follow_mode = 5
 follow_target = NodePath("../Jugador")
 tween_resource = SubResource("Resource_1swxr")
-follow_offset = Vector2(97.535, 0)
+follow_offset = Vector2(100, -20)
 follow_damping = true
+follow_damping_value = Vector2(0.1, 0.2)
+dead_zone_width = 0.077
+dead_zone_height = 0.154
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=259355973 node_paths=PackedStringArray("camara_zona")]
@@ -88,6 +91,20 @@ zoom = Vector2(0.645, 0.645)
 tween_resource = SubResource("Resource_uphlu")
 noise = SubResource("Resource_5ck4x")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CamaraZona" unique_id=1333683473]
+
+[node name="Control" type="Control" parent="CamaraZona/CanvasLayer" unique_id=1785578557]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CamaraZona/CanvasLayer/Control" unique_id=1324637937]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "asdasd"
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1387086001]
 curve = SubResource("Curve2D_sckn0")

@@ -23,6 +23,18 @@ region = Rect2(141, 37, 45, 37)
 atlas = ExtResource("2_ivmpe")
 region = Rect2(188, 37, 45, 37)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2xw6"]
+atlas = ExtResource("2_ivmpe")
+region = Rect2(0, 0, 45, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17whh"]
+atlas = ExtResource("2_ivmpe")
+region = Rect2(45, 0, 45, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udf48"]
+atlas = ExtResource("2_ivmpe")
+region = Rect2(90, 0, 45, 37)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_17whh"]
 animations = [{
 "frames": [{
@@ -44,6 +56,20 @@ animations = [{
 "loop": true,
 "name": &"correr",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2xw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17whh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udf48")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivmpe"]
@@ -60,8 +86,9 @@ script = ExtResource("1_qjxqm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=856668664]
 scale = Vector2(1.6467984, 1.4256756)
 sprite_frames = SubResource("SpriteFrames_17whh")
-animation = &"correr"
-frame_progress = 0.84973705
+animation = &"idle"
+frame = 1
+frame_progress = 0.27844492
 speed_scale = 1.5
 flip_h = true
 
