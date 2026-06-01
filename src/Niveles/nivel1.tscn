@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://5todhxwlu6rk" path="res://src/CopaMundial/copaMundial.tscn" id="4_fb1uc"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_lcsbq"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_j00vu"]
+[ext_resource type="Script" uid="uid://dimvdouy8g0sv" path="res://addons/phantom_camera/scripts/resources/phantom_camera_noise_2d.gd" id="7_1swxr"]
 [ext_resource type="Script" uid="uid://ct8gvpew0u24n" path="res://src/Niveles/path_follow_2d.gd" id="7_cjegp"]
 [ext_resource type="Script" uid="uid://560q4wwvjlyj" path="res://src/Niveles/area_2d_salto.gd" id="7_j00vu"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_uphlu"]
@@ -22,6 +23,11 @@ radius = 310.13705
 [sub_resource type="Resource" id="Resource_uphlu"]
 script = ExtResource("7_uphlu")
 
+[sub_resource type="Resource" id="Resource_5ck4x"]
+script = ExtResource("7_1swxr")
+frequency = 1.0
+metadata/_custom_type_script = "uid://dimvdouy8g0sv"
+
 [sub_resource type="Curve2D" id="Curve2D_sckn0"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -2, 223, 0, 0, 0, 0, 1931, 223)
@@ -36,7 +42,7 @@ tile_map_data = PackedByteArray("AAD//wgAAAABAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAA
 tile_set = ExtResource("1_sckn0")
 
 [node name="Jugador" parent="." unique_id=610521422 instance=ExtResource("2_cjegp")]
-position = Vector2(191, 205)
+position = Vector2(1972, 65)
 
 [node name="RigidBody2D" parent="." unique_id=1146676087 instance=ExtResource("4_fb1uc")]
 position = Vector2(2988, 217)
@@ -44,7 +50,7 @@ position = Vector2(2988, 217)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1878448171]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(288.535, 205)
+position = Vector2(2069.535, 65)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1752660864]
 process_priority = 300
@@ -54,7 +60,7 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=758979383 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(288.535, 205)
+position = Vector2(2069.535, 65)
 script = ExtResource("6_j00vu")
 priority = 5
 follow_mode = 2
@@ -62,7 +68,6 @@ follow_target = NodePath("../Jugador")
 tween_resource = SubResource("Resource_1swxr")
 follow_offset = Vector2(97.535, 0)
 follow_damping = true
-follow_damping_value = Vector2(0.2, 0.2)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=259355973 node_paths=PackedStringArray("camara_zona")]
@@ -81,6 +86,7 @@ position = Vector2(2480, 82)
 script = ExtResource("6_j00vu")
 zoom = Vector2(0.645, 0.645)
 tween_resource = SubResource("Resource_uphlu")
+noise = SubResource("Resource_5ck4x")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1387086001]
