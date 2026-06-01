@@ -16,7 +16,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 		#animacion.play("saltar")
 		saltar()
-
 	if Input.is_action_pressed("derecha"):
 		animacion.flip_h=false
 		animacion.play("correr")
