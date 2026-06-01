@@ -50,17 +50,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="menu" type="Button" parent="VBoxContainer2" unique_id=911784642]
-layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("4_xlkpt")
-text = "Volver al Menú"
-
 [node name="reanudar" type="Button" parent="VBoxContainer2" unique_id=71985723]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("4_xlkpt")
 text = "Reanudar"
+
+[node name="menu" type="Button" parent="VBoxContainer2" unique_id=911784642]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_xlkpt")
+text = "Volver al Menú"
 
 [node name="Label2" type="Label" parent="." unique_id=247760734]
 layout_mode = 1
@@ -83,5 +83,5 @@ theme_override_constants/shadow_outline_size = 5
 text = "Perdiste!"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer2/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer2/reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="VBoxContainer2/menu" to="." method="_on_menu_pressed"]
