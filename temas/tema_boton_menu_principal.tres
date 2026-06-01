@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://bqjf6rqfyg6hf"]
+
+[ext_resource type="FontFile" uid="uid://b6i3l61agm6dr" path="res://temas/fuenteBotonAri.ttf" id="1_3el8i"]
+[ext_resource type="StyleBox" uid="uid://erck345vy2r6" path="res://temas/EstadosBoton/focus.tres" id="1_31rr0"]
+[ext_resource type="StyleBox" uid="uid://bm2s3slsnckp6" path="res://temas/EstadosBoton/normal.tres" id="1_sgf4c"]
+[ext_resource type="StyleBox" uid="uid://c1ei1i0ihaics" path="res://temas/EstadosBoton/hover.tres" id="2_3el8i"]
+[ext_resource type="StyleBox" uid="uid://btc48yl6abvj3" path="res://temas/EstadosBoton/pressed.tres" id="2_4qs1n"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 18
+Button/fonts/font = ExtResource("1_3el8i")
+Button/styles/focus = ExtResource("1_31rr0")
+Button/styles/hover = ExtResource("2_3el8i")
+Button/styles/normal = ExtResource("1_sgf4c")
+Button/styles/pressed = ExtResource("2_4qs1n")
