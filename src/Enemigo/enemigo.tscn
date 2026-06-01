@@ -42,7 +42,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_mc5c1")
 }],
 "loop": true,
-"name": &"default",
+"name": &"correr",
 "speed": 5.0
 }]
 
@@ -60,7 +60,8 @@ script = ExtResource("1_qjxqm")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=856668664]
 scale = Vector2(1.6467984, 1.4256756)
 sprite_frames = SubResource("SpriteFrames_17whh")
-frame_progress = 0.6864049
+animation = &"correr"
+frame_progress = 0.84973705
 speed_scale = 1.5
 flip_h = true
 
