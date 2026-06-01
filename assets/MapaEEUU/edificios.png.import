@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dunv5282gftao"
-path="res://.godot/imported/diegoIdle.png-b8fdb617904abfe7a5a6ad9876fb87cc.ctex"
+uid="uid://jgjpjlxrxdqd"
+path="res://.godot/imported/edificios.png-165bb6a6c8761afdd9e2ef832e94123d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/diegoIdle.png"
-dest_files=["res://.godot/imported/diegoIdle.png-b8fdb617904abfe7a5a6ad9876fb87cc.ctex"]
+source_file="res://assets/MapaEEUU/edificios.png"
+dest_files=["res://.godot/imported/edificios.png-165bb6a6c8761afdd9e2ef832e94123d.ctex"]
 
 [params]
 
