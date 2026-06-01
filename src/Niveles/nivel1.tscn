@@ -7,12 +7,19 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="5_lcsbq"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_j00vu"]
 [ext_resource type="Script" uid="uid://ct8gvpew0u24n" path="res://src/Niveles/path_follow_2d.gd" id="7_cjegp"]
+[ext_resource type="Script" uid="uid://560q4wwvjlyj" path="res://src/Niveles/area_2d_salto.gd" id="7_j00vu"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_uphlu"]
 [ext_resource type="PackedScene" uid="uid://n2lhstemq5ga" path="res://src/Obstaculos/Caja/caja.tscn" id="9_ka7ow"]
 [ext_resource type="PackedScene" uid="uid://dwf720n642wuu" path="res://src/Obstaculos/Trampolin/trampolin.tscn" id="10_fb1uc"]
 [ext_resource type="PackedScene" uid="uid://c730e1p1l2hed" path="res://src/Obstaculos/TrampolinChico/trampolinChico.tscn" id="11_lcsbq"]
 
 [sub_resource type="Resource" id="Resource_1swxr"]
+script = ExtResource("7_uphlu")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1swxr"]
+radius = 310.13705
+
+[sub_resource type="Resource" id="Resource_uphlu"]
 script = ExtResource("7_uphlu")
 
 [sub_resource type="Curve2D" id="Curve2D_sckn0"]
@@ -58,6 +65,24 @@ follow_damping = true
 follow_damping_value = Vector2(0.2, 0.2)
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
+[node name="Area2D" type="Area2D" parent="." unique_id=259355973 node_paths=PackedStringArray("camara_zona")]
+position = Vector2(2405, 85)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("7_j00vu")
+camara_zona = NodePath("../CamaraZona")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=179832578]
+shape = SubResource("CircleShape2D_1swxr")
+
+[node name="CamaraZona" type="Node2D" parent="." unique_id=719268931]
+position = Vector2(2480, 82)
+script = ExtResource("6_j00vu")
+zoom = Vector2(0.645, 0.645)
+tween_resource = SubResource("Resource_uphlu")
+metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
 [node name="Path2D" type="Path2D" parent="." unique_id=1387086001]
 curve = SubResource("Curve2D_sckn0")
 
@@ -69,7 +94,7 @@ loop = false
 script = ExtResource("7_cjegp")
 
 [node name="Enemigo" parent="Path2D/PathFollow2D" unique_id=1105322210 instance=ExtResource("3_ka7ow")]
-position = Vector2(-1.9974442, -0.10113716)
+position = Vector2(-1.504402, 9.936638)
 rotation = 0.05058971
 
 [node name="Node" type="Node" parent="." unique_id=445817262]
@@ -153,3 +178,6 @@ position = Vector2(1840, 158)
 
 [node name="Trampolin3" parent="Node" unique_id=84628241 instance=ExtResource("10_fb1uc")]
 position = Vector2(2309, 245)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
