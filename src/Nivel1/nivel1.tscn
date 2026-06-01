@@ -61,10 +61,10 @@ expand_mode = 1
 
 [node name="TextureRect5" type="TextureRect" parent="." unique_id=421717482]
 z_index = -2
-offset_left = 2.0
-offset_top = 116.0
-offset_right = 594.0
-offset_bottom = 265.0
+offset_left = 1.0
+offset_top = 135.0
+offset_right = 593.0
+offset_bottom = 284.0
 texture = ExtResource("2_5ck4x")
 expand_mode = 1
 
@@ -255,7 +255,6 @@ position = Vector2(3019, 218)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1878448171]
 physics_interpolation_mode = 1
-top_level = true
 position = Vector2(243, 207)
 zoom = Vector2(0.985, 0.985)
 

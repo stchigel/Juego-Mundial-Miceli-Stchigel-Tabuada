@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5todhxwlu6rk"]
 
 [ext_resource type="Script" uid="uid://c7iqjxm4sq66l" path="res://src/CopaMundial/copa_mundial.gd" id="1_e1xon"]
-[ext_resource type="Texture2D" uid="uid://br54lt4axmpt8" path="res://assets/copaMundial.png" id="1_vjefn"]
+[ext_resource type="Texture2D" uid="uid://cr2s1g2ypta3v" path="res://assets/CopaMundial.png" id="2_e1xon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1xon"]
 size = Vector2(10, 44)
@@ -15,14 +15,14 @@ collision_mask = 5
 script = ExtResource("1_e1xon")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=526468847]
-scale = Vector2(0.029594097, 0.029594097)
-texture = ExtResource("1_vjefn")
+position = Vector2(1.0000007, 4.7683716e-07)
+scale = Vector2(0.057289965, 0.044500023)
+texture = ExtResource("2_e1xon")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591961925]
 visible = false
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_e1xon")
-debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=58520532]
 collision_layer = 8
