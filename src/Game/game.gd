@@ -31,6 +31,8 @@ func _crearNivel(numeroNivel :int):
 	if copa:
 		copa.pasarNivelSenal.connect(_pasarNivel)
 		copa.destruidoSenal.connect(_perderNivel)
+	
+	$pausa.reiniciarNivel.connect(reiniciarNivel)
 
 func reiniciarNivel():
 	_nivelActualNodo.queue_free()
