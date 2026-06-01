@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://exe7k8h3ege4"
-path="res://.godot/imported/PayneCorre.png-40a504e88de3c4207b83d122dc129d13.ctex"
+uid="uid://bg7nqnmiecx51"
+path="res://.godot/imported/CieloCan.jpg-0ea58ce21d54017883d06088007d30ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PayneCorre.png"
-dest_files=["res://.godot/imported/PayneCorre.png-40a504e88de3c4207b83d122dc129d13.ctex"]
+source_file="res://assets/CieloCan.jpg"
+dest_files=["res://.godot/imported/CieloCan.jpg-0ea58ce21d54017883d06088007d30ba.ctex"]
 
 [params]
 

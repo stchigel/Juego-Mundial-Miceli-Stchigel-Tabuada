@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkr158ad3wdwt"
-path="res://.godot/imported/PeleCorre.png-e3148c128b01d8419158596c3ddb30e7.ctex"
+uid="uid://jgjpjlxrxdqd"
+path="res://.godot/imported/edificios.png-165bb6a6c8761afdd9e2ef832e94123d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PeleCorre.png"
-dest_files=["res://.godot/imported/PeleCorre.png-e3148c128b01d8419158596c3ddb30e7.ctex"]
+source_file="res://assets/MapaEEUU/edificios.png"
+dest_files=["res://.godot/imported/edificios.png-165bb6a6c8761afdd9e2ef832e94123d.ctex"]
 
 [params]
 

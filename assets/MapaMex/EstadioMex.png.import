@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dunv5282gftao"
-path="res://.godot/imported/diegoIdle.png-b8fdb617904abfe7a5a6ad9876fb87cc.ctex"
+uid="uid://bfxgbyglhmwbu"
+path="res://.godot/imported/EstadioMex.png-ab94362f5145f71a6ea7ca0e25c603bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/diegoIdle.png"
-dest_files=["res://.godot/imported/diegoIdle.png-b8fdb617904abfe7a5a6ad9876fb87cc.ctex"]
+source_file="res://assets/MapaMex/EstadioMex.png"
+dest_files=["res://.godot/imported/EstadioMex.png-ab94362f5145f71a6ea7ca0e25c603bc.ctex"]
 
 [params]
 

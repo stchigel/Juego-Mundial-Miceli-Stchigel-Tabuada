@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm818b0winmfc"
-path="res://.godot/imported/diegoCorre.png-d1d2f184dae76646a127ff72a5919e31.ctex"
+uid="uid://bf8guaqqn25b0"
+path="res://.godot/imported/EstadioCan.png-f1477c5ce8326682a880127d4ddd64c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/diegoCorre.png"
-dest_files=["res://.godot/imported/diegoCorre.png-d1d2f184dae76646a127ff72a5919e31.ctex"]
+source_file="res://assets/EstadioCan.png"
+dest_files=["res://.godot/imported/EstadioCan.png-f1477c5ce8326682a880127d4ddd64c5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5em43bgfi1ws"
-path="res://.godot/imported/PeleIdle.png-cb2cd74c362b49be4bc0fe8ac093837c.ctex"
+uid="uid://exe7k8h3ege4"
+path="res://.godot/imported/PayneCorre.png-ebe412194e64258584482a0a9662adcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PeleIdle.png"
-dest_files=["res://.godot/imported/PeleIdle.png-cb2cd74c362b49be4bc0fe8ac093837c.ctex"]
+source_file="res://assets/Personajes/PayneCorre.png"
+dest_files=["res://.godot/imported/PayneCorre.png-ebe412194e64258584482a0a9662adcc.ctex"]
 
 [params]
 
