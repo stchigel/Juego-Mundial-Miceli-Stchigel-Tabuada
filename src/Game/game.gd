@@ -36,6 +36,10 @@ func _perderNivel():
 	get_tree().change_scene_to_file.call_deferred("res://src/Perdiste/perdiste.tscn")
 
 func _pasarNivel():
-	# Guardamos el avance de forma global
-	GlobalGameManager.nivel_actual += 1
-	reiniciarNivel()
+	# Verificamos si todavía quedan niveles en el array
+	if GlobalGameManager.nivel_actual < niveles.size():
+		GlobalGameManager.nivel_actual += 1
+		reiniciarNivel()
+	else:
+		# Si ya no hay más niveles, cargamos la pantalla de victoria
+		get_tree().change_scene_to_file.call_deferred("res://src/Ganaste/ganaste.tscn")
