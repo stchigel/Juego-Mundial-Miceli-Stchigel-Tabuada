@@ -258,6 +258,10 @@ physics_interpolation_mode = 1
 top_level = true
 position = Vector2(243, 207)
 zoom = Vector2(0.985, 0.985)
+limit_left = -64
+limit_top = -64
+limit_right = 1984
+limit_bottom = 384
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1752660864]
 process_priority = 300
@@ -389,7 +393,7 @@ position = Vector2(621, 223)
 position = Vector2(758, 245)
 
 [node name="Trampolin" parent="Node" unique_id=693947891 instance=ExtResource("10_fb1uc")]
-position = Vector2(1460, 245)
+position = Vector2(1426, 247)
 
 [node name="Trampolin2" parent="Node" unique_id=1986351610 instance=ExtResource("10_fb1uc")]
 position = Vector2(1702, 245)
