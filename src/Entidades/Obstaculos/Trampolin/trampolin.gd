@@ -8,5 +8,4 @@ func destruir():
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.get("alturaSaltoTrampolin"):
-		print("salto")
 		body.velocity.y = body.alturaSaltoTrampolin

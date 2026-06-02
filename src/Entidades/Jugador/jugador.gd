@@ -24,7 +24,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 		saltar()
 
-	# Al tocar el dash iniciamos la acción y CORTAMOS la ejecución con return
 	if Input.is_action_just_pressed("dash") and puede_hacer_dash:
 		_iniciar_dash()
 		return 

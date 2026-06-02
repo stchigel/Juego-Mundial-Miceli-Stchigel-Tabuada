@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://dwf720n642wuu" path="res://src/Entidades/Obstaculos/Trampolin/trampolin.tscn" id="10_fb1uc"]
 [ext_resource type="PackedScene" uid="uid://c730e1p1l2hed" path="res://src/Entidades/Obstaculos/TrampolinChico/trampolinChico.tscn" id="11_lcsbq"]
 [ext_resource type="Theme" uid="uid://dcd6ajsobniap" path="res://temas/tema_ingame.tres" id="17_ptd1b"]
-[ext_resource type="Texture2D" uid="uid://ckboidv1754lg" path="res://assets/MapaEEUU/CarritoPanchos.png" id="18_pdldd"]
 
 [sub_resource type="Resource" id="Resource_1swxr"]
 script = ExtResource("7_uphlu")
@@ -400,11 +399,6 @@ position = Vector2(1840, 158)
 
 [node name="Trampolin3" parent="Node" unique_id=84628241 instance=ExtResource("10_fb1uc")]
 position = Vector2(2309, 245)
-
-[node name="WatermarkedImg5223112013547282194RemovebgPreview" type="Sprite2D" parent="." unique_id=1090700011]
-position = Vector2(1292, 220)
-scale = Vector2(0.35946736, 0.19986448)
-texture = ExtResource("18_pdldd")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

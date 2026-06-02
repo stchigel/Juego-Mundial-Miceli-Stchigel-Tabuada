@@ -5,8 +5,11 @@ extends Node2D
 var _nivelActualNodo: Node 
 
 func _ready() -> void:
-	# Ahora lee el nivel desde el Singleton global
 	_crearNivel(GlobalGameManager.nivel_actual)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pasarNivel"):
+		_pasarNivel()
 
 func _crearNivel(numeroNivel :int):
 	_nivelActualNodo=niveles[numeroNivel-1].instantiate()
@@ -15,7 +18,7 @@ func _crearNivel(numeroNivel :int):
 	#esto es para esperar 1 fotograma a que el niel viejo se borre
 	await get_tree().process_frame
 	#sino al hacer la logica que esta debajo, godot no sabe si agarrar
-	#al personaje del nivel anterior o al que se creó recien, entonces
+	#al enemigo del nivel anterior o al que se creó recien, entonces
 	#esperamos 1 fotograma para que se elimine el anterior y 
 	#solo haya q agarrar el recien creado :) 
 	
@@ -39,7 +42,7 @@ func reiniciarNivel():
 	_crearNivel.call_deferred(GlobalGameManager.nivel_actual)
 
 func _perderNivel():
-	get_tree().change_scene_to_file.call_deferred("res://src/Perdiste/perdiste.tscn")
+	get_tree().change_scene_to_file.call_deferred("res://src/Pantallas/Perdiste/perdiste.tscn")
 
 func _pasarNivel():
 	# Verificamos si todavía quedan niveles en el array
@@ -47,5 +50,5 @@ func _pasarNivel():
 		GlobalGameManager.nivel_actual += 1
 		reiniciarNivel()
 	else:
-		# Si ya no hay más niveles, cargamos la pantalla de victoria
-		get_tree().change_scene_to_file.call_deferred("res://src/Ganaste/ganaste.tscn")
+		#si ya no hay más niveles, cargamos la pantalla de ganaste
+		get_tree().change_scene_to_file.call_deferred("res://src/Pantallas/Ganaste/ganaste.tscn")

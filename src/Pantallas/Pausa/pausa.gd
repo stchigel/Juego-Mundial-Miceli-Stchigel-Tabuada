@@ -17,7 +17,7 @@ func _input(event: InputEvent) -> void:
 
 func _volverMenu():
 	_alternarPausa()
-	get_tree().change_scene_to_file("res://src/Menu/menu.tscn")
+	get_tree().change_scene_to_file("res://src/Pantallas/Menu/menu.tscn")
 
 func _alternarPausa():
 	get_tree().paused = !get_tree().paused
