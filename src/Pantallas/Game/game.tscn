@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ck34qefhskcmu"]
+
+[ext_resource type="Script" uid="uid://vxgkhkh5drbt" path="res://src/Pantallas/Game/game.gd" id="1_60cvd"]
+[ext_resource type="PackedScene" uid="uid://d2wnxskbuxomf" path="res://src/Niveles/Nivel1/nivel1.tscn" id="2_3s8ir"]
+[ext_resource type="PackedScene" uid="uid://dn7wawppiqr8" path="res://src/Niveles/nivelSt/nivel.tscn" id="3_sag4g"]
+[ext_resource type="PackedScene" uid="uid://b127nleotko6q" path="res://src/Pantallas/Pausa/pausa.tscn" id="4_bob6j"]
+[ext_resource type="PackedScene" uid="uid://cdx1w4ju5fgin" path="res://src/Niveles/Nivel2/nivel2.tscn" id="4_x770e"]
+
+[node name="Game" type="Node2D" unique_id=1937971750]
+script = ExtResource("1_60cvd")
+niveles = Array[PackedScene]([ExtResource("2_3s8ir"), ExtResource("3_sag4g"), ExtResource("4_x770e")])
+
+[node name="pausa" parent="." unique_id=1788166934 instance=ExtResource("4_bob6j")]

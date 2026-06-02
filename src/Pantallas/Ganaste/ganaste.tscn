@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://b847ehfjca6de"]
+
+[ext_resource type="Script" uid="uid://cpv01r13ygt1l" path="res://src/Pantallas/Ganaste/ganaste.gd" id="1_ijw5t"]
+[ext_resource type="Texture2D" uid="uid://bn6rdutru2wsn" path="res://assets/Fondos/ganaste.jpg" id="2_bhum3"]
+[ext_resource type="Theme" uid="uid://dgvesxoa5xmom" path="res://temas/tema_titulo.tres" id="3_nnkl4"]
+[ext_resource type="Theme" uid="uid://bqjf6rqfyg6hf" path="res://temas/tema_boton_menu_principal.tres" id="4_7ippl"]
+
+[node name="Ganaste" type="Control" unique_id=1489303257]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ijw5t")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=684296872]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("2_bhum3")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1040631363]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -129.0
+offset_right = 124.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_nnkl4")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_outline_size = 5
+text = "Ganaste!"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=418108310]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = 85.0
+offset_right = 89.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=911784642]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_7ippl")
+text = "Volver al Menú"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

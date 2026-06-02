@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://dgvesxoa5xmom"]
+
+[ext_resource type="FontFile" uid="uid://brenk7vgooq4c" path="res://temas/fuenteTituloDaydream.otf" id="1_7daan"]
+
+[resource]
+default_font = ExtResource("1_7daan")
+default_font_size = 30
